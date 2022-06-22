@@ -1,0 +1,119 @@
+/* Set margins of display to match a piece of paper */
+@page {
+    size: letter;
+}
+
+/* When printing, set link color to black */
+@media print {
+    a, a:visited {
+        color: #000 !important;
+        text-decoration: none;
+    }
+
+    html, body {
+        width: 100vw !important;
+        height: 100vh !important;
+        page-break-after: avoid !important;
+        page-break-before: avoid !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+    }
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 10pt;
+    line-height: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+b {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0.2em 0 0.4em 0;
+}
+
+h3 {
+    font-size: 1.3em;
+    margin: 0.2em 0 0.2em 0;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p {
+    margin: 0.2em 0 0.2em 0;
+}
+
+a {
+    color: #3366BB;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0.2em 0 0.2em 0;
+    padding: 0 0 0 25px;
+}
+
+dl {
+    width: 100%;
+    margin: 0;
+}
+
+.section-header {
+    margin: 0.4em 0 0.1em 0;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+td {
+    padding: 0 0.8em 0 0;
+}
+
+hr {
+    margin: 0.4em 0 0.4em 0;
+}
+
+.tags {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 10pt;
+    color: #999;
+    padding-bottom: 5px;
+}
+
+.subtitle1 {
+    font-weight: 400;
+}
+
+.relax-subtitle1 {
+    font-weight: 100;
+}
+
+.subtitle2 {
+    float: right;
+    font-style: italic;
+    font-family: 'Cutive Mono', monospace;
+    color: #333333;
+    font-size: 0.85em;
+}
+
+.icon {
+    height: 0.85em;
+    width: 0.85em;
+}

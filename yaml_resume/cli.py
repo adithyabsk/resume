@@ -9,6 +9,7 @@ from .resume import Resume
 THEMES = {
     "classic": "optional",
     "material": "mandatory",
+    "simple": "optional",
 }  # optional or mandatory depending if the theme must have an profile picture
 
 

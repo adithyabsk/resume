@@ -126,3 +126,7 @@ test-results/*
 
 # sonar
 .scannerwork/
+
+# Ignore generated files
+resume.html
+resume.pdf

@@ -1,82 +1,27 @@
-# yaml-resume
+# Adithya's Resume
 
-![](https://yaml-resume.com/logo.png)
+Based on [yaml-resume](https://github.com/notsag/yaml-resume)
 
-[![PyPI version](https://badge.fury.io/py/yaml-resume.svg)](https://badge.fury.io/py/yaml-resume)
-![tests](https://github.com/notsag/yaml_resume/actions/workflows/build.yml/badge.svg?branch=master)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=notsag_yaml-resume&metric=alert_status)](https://sonarcloud.io/dashboard?id=notsag_yaml-resume)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Python 3.6+](https://img.shields.io/badge/python-3.6%7C3.7%7C3.8-blue.svg)](https://www.python.org/downloads/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-=======
+**Setup**
 
-## Purpose
+* [WeasyPrint](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html):
+For "printing" the pdf, converts html files to pdf without a browser
+* Fonts
+  * You need to install the following Google Fonts locally for the pdf printing
+  to work--drag the `.otf` files into FontBook
+  * [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans)
+  * [Cutive Mono](https://fonts.google.com/specimen/Cutive+Mono)
 
-This is an open source initiative to create a YAML-based resume.
-
-## Getting Started
-
-### Install
-
-Package is available on Pypi : 
-
-```
-pip install yaml-resume
+```shell
+# WeasyPrint requirements
+brew install python pango libffi
+# local package
+pip install -e .
 ```
 
-### Usage
+**Usage**
 
-Init a new resume through an interactive cli:
-
+```shell
+yaml-resume export swe.yaml -t simple -e html
+weasyprint resume.html resume.pdf
 ```
-yaml-resume init FILENAME
-```
-
-Validate your yaml resume:
-
-```
-yaml-resume validate FILENAME
-```
-
-Export you resume in html or pdf:
-
-```
-yaml-resume export FILENAME [-t <theme>] [-e <html|pdf>] [-i <picture>] [-o <output-file>]
-```
-
-## Contributions
-
-Please have a look at the [contributing guide](https://github.com/notsag/yaml-resume/blob/master/CONTRIBUTING.md) and the [code of conduct](https://github.com/notsag/yaml-resume/blob/master/CODE_OF_CONDUCT.md).
-
-### TL;DR
-
-You can ask for features/report bugs using Github issues.
-You can submit work using Github Pull Requests.
-
-To test development version without installing : 
-
-```
-# To install dependencies
-python3 -m pip install -r requirements.txt
-python3 -m pip install pytest pytest-cov black pre-commit
-
-# To run the cli
-python3 -m yaml_resume
-
-# To run the test suite
-python3 -m pytest --cov=yaml_resume tests/
-
-# To install pre-commit hook
-pre-commit install
-```
-
-## Credits
-
-This project was inspired by : [JSON Resume](https://github.com/jsonresume).
-
-Special thanks to all contributors of the following projects used by yaml-resume :
- - [click](https://palletsprojects.com/p/click/)
- - [cerberus](https://python-cerberus.org)
- - [PyYAML](https://pyyaml.org/)
- - [jinja2](https://palletsprojects.com/p/jinja/)
- - [WeasyPrint](https://weasyprint.org/)

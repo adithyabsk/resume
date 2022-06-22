@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {#  Remove spaces in between name #}
+  <title>{{ resume.contact.name.split(' ') | join('') }}Resume</title>
+  <style>
+    {% include "simple.css" %}
+  </style>
+{#  <script src="https://kit.fontawesome.com/88f9cae79c.js" crossorigin="anonymous"></script>#}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.2.3/paper.css"/>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Cutive+Mono">
+</head>
+<body class="letter">
+<section class="sheet padding-10mm">
+  <h1>{{ resume.contact.name }}</h1>
+  <p>
+    <i class="fa fa-solid fa-location-pin"></i><strong> Location:</strong> {{ resume.contact.location }}&nbsp;&nbsp;
+    <i class="fa fa-solid fa-phone"></i><strong> Phone:</strong> {{ resume.contact.phone }}&nbsp;&nbsp;
+    <i class="fa fa-solid fa-envelope"></i><strong> Email:</strong><a
+          href="mailto:{{ resume.contact.email }}"> {{ resume.contact.email }}</a>
+    <br/>
+    {% for p in resume.profiles %}
+      {% if 'Github' == p.network %}
+{#        <i class="fa fa-brands fa-github"></i>#}
+        <img class="icon" src="assets/github.svg" alt="GitHub">
+      {% elif 'LinkedIn' == p.network %}
+{#        <i class="fa fa-brands fa-linkedin"></i>#}
+        <img class="icon" src="assets/linkedin.svg" alt="LinkedIn">
+      {% endif %}
+      <strong>{{ p.network }}: </strong><a href="{{ p.website }}">{{ p.website }}</a>&nbsp;&nbsp;
+    {% endfor %}
+  </p>
+  <hr/>
+  <h2 class="section-header">Experience</h2>
+  {% for e in resume.experiences %}
+    <h3>
+      <a href="{{ e.website }}">{{ e.company }}</a> - <span class="subtitle1">{{ e.position }} - </span>
+      <span class="subtitle2">{{ e.start_date }} - {% if not e.end_date %}Present{% else %}
+        {{ e.end_date }}{% endif %}</span>
+    </h3>
+    <ul>{% for line in e.summary.split('\n')[: -1] %}
+      <li>{{ line }}</li>{% endfor %}</ul>
+    {% if e.tags %}
+      <div class="tags">-{% for tag in e.tags %} {{ tag }} -{% endfor %}</div>{% endif %}
+  {% endfor %}
+  <h2 class="section-header">Education</h2>
+  <i style="margin: 0 0 0.4em 0">(Selected, relevant courses)</i>
+  {% for d in resume.education %}
+    <h3>
+      <a href="{{ d.website }}">{{ d.institution }}</a> - 
+      <span class="subtitle1">
+        {{ d.degree }}
+        <span class="relax-subtitle1"> in </span>
+        {{ d.program }}
+      </span> - 
+      <span class="subtitle2">{{ d.start_date }} - {% if not d.end_date %}Present{% else %}
+        {{ d.end_date }}{% endif %}</span>
+    </h3>
+    {% if d.courses %}
+      <p><i>{{ d.location }}</i> - {{ d.courses|join(', ') }}</p>
+    {% endif %}
+  {% endfor %}
+  {% if resume.projects %}
+    <h2 class="section-header">Selected Projects</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Website</th>
+      </tr>
+      {% for p in resume.projects %}
+        <tr>
+          <td><b>{{ p.name }}</b></td>
+          <td>{{ p.description }}</td>
+          <td style="white-space: nowrap"><a href="{{ p.website }}">{{ p.website }}</a></td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+  {% if resume.awards %}
+    <h2 class="section-header">Selected Awards and Honors</h2>
+    <table>
+      <tr>
+        <th>Year</th>
+        <th>Name</th>
+        <th>Classification</th>
+      </tr>
+      {% for a in resume.awards %}
+        <tr>
+          <td>{{ a.year }}</td>
+          <td><a href="{{ a.website }}"><b>{{ a.name }}</b></a></td>
+          <td>{{ a.description }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% endif %}
+</section>
+</body>
+</html>

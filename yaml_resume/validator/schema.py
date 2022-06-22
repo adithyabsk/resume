@@ -24,10 +24,13 @@ experience = {
 
 degree = {
     "institution": {"type": "string"},
+    "program": {"type": "string"},
     "degree": {"type": "string"},
     "start_date": {"type": "string"},
     "end_date": {"type": "string", "required": False},
+    "location": {"type": "string", "required": False},
     "website": {"type": "string", "regex": URL_REGEX, "required": False},
+    "courses": {"type": "list", "schema": {"type": "string"}},
 }
 
 skill = {"name": {"type": "string"}, "level": {"type": "integer", "min": 0, "max": 100}}
@@ -37,34 +40,26 @@ hobby = {"name": {"type": "string"}, "details": {"type": "string", "required": F
 project = {
     "name": {"type": "string"},
     "description": {"type": "string"},
-    "url": {"type": "string", "regex": URL_REGEX, "required": False},
+    "website": {"type": "string", "regex": URL_REGEX, "required": False},
 }
 
 language = {"name": {"type": "string"}, "level": {"type": "string"}}
 
-profile = {"network": {"type": "string"}, "url": {"type": "string", "regex": URL_REGEX}}
-
-location = {
-    "address": {"type": "string"},
-    "city": {"type": "string"},
-    "state": {"required": False, "type": "string"},
-    "zip": {"type": "string"},
-    "country": {"required": False, "type": "string"},
-}
+profile = {"network": {"type": "string"}, "website": {"type": "string", "regex": URL_REGEX}}
 
 contact = {
     "name": {"type": "string"},
-    "job": {"type": "string"},
     "summary": {"required": False, "type": "string"},
-    "date_of_birth": {"type": "string", "regex": DOB_REGEX},
     "email": {"type": "string", "regex": EMAIL_REGEX},
     "phone": {"type": "string", "regex": PHONE_NUMBER_REGEX},
-    "location": {
-        "type": "dict",
-        "required": True,
-        "require_all": True,
-        "schema": location,
-    },
+    "location": {"type": "string"},
+}
+
+award = {
+    "name": {"type": "string"},
+    "year": {"type": "integer"},
+    "description": {"type": "string"},
+    "website": {"type": "string", "regex":URL_REGEX, "required": False},
 }
 
 resume = {
@@ -73,6 +68,10 @@ resume = {
         "required": True,
         "require_all": True,
         "schema": contact,
+    },
+    "summary": {
+        "type": "string",
+        "required": False
     },
     "profiles": {
         "type": "list",
@@ -94,7 +93,7 @@ resume = {
     },
     "skills": {
         "type": "list",
-        "required": True,
+        "required": False,
         "require_all": True,
         "schema": {"type": "dict", "schema": skill},
     },
@@ -115,5 +114,11 @@ resume = {
         "required": False,
         "require_all": False,
         "schema": {"type": "dict", "schema": hobby},
+    },
+    "awards": {
+        "type": "list",
+        "required": False,
+        "require_all": True,
+        "schema": {"type": "dict", "schema": award},
     },
 }

@@ -188,7 +188,7 @@ p {
     font-feature-settings: "liga";
 }
 
-.left-col .item ..material-icons {
+.left-col .item .material-icons {
     width:20%;
     text-align: center;
     margin-left: -10px;

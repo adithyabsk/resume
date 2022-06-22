@@ -9,16 +9,16 @@ class Project(yaml.YAMLObject):
     :type name: str
     :param description: The description of the project.
     :type description: str
-    :param url: The url of the project.
-    :type url: str
+    :param website: The url of the project.
+    :type website: str
     """
 
     yaml_tag = u"Project"
 
-    def __init__(self, name, description, url):
+    def __init__(self, name, description, website):
         self.name = name
         self.description = description
-        self.url = url
+        self.website = website
 
     @staticmethod
     def ask():
@@ -34,8 +34,8 @@ class Project(yaml.YAMLObject):
             while continue_adding:
                 name = click.prompt("Name")
                 description = click.prompt("Description")
-                url = click.prompt("URL (optional)", default="")
-                projects.append(Project(name, description, url))
+                website = click.prompt("URL (optional)", default="")
+                projects.append(Project(name, description, website))
                 continue_adding = click.confirm("Add a new project?")
             correct = click.confirm("Is this correct?")
         return projects
@@ -49,4 +49,4 @@ class Project(yaml.YAMLObject):
         :returns: A Project object.
 
         """
-        return Project(data.get("name"), data.get("description"), data.get("url"))
+        return Project(data.get("name"), data.get("description"), data.get("website"))
