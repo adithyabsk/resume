@@ -194,11 +194,11 @@ projects:
     website: https://github.com/adithyabsk/tftbot
 
 #  - name: On Chain Profile Picture
-#    description: A deployed NFT to the ethereum blockchain using SVG compression
+#    description: An NFT stored on the ethereum blockchain using SVG compression
 #    website: https://github.com/adithyabsk/onChainProfilePicture
 
 #  - name: Prajna
-#    description: A zkSNARK (zero knowledge proof) puzzle platform for ethereum (source available upon request)
+#    description: A zkSNARK (zero knowledge proof) puzzle platform for ethereum
 #    website: https://github.com/adithyabsk/prajna
 
 #  - name: Dolev Strong
