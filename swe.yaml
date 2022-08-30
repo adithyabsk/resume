@@ -119,13 +119,15 @@ education:
     courses:
       - Discrete Mathematics
       - Data Structures
+#      - Computer Architecture
 #      - Control Systems
-#      - Industrial Robotics
+      - Industrial Robotics
       - Embedded Systems
 #      - Neural Networks
       - Computer Vision
       - Object Oriented Development
-      - Graph Theory
+# NCSSM courses moved here to save space
+#      - Graph Theory
       - Calculus III
 #      - Mathematical Modeling
 #      - Differential Equations
@@ -244,6 +246,11 @@ projects:
 #  - name: Ruby Storefront
 #    description: A e-commerce store built using Ruby on Rails and deployed to Heroku.
 #    website: https://github.com/adithyabsk/rubystorefront
+
+#  - name: Moon Ranger
+#    description: Develop software architectures and contributed C++ ROS implementations to the first rover landing on the South Pole of the moon
+#    website: https://labs.ri.cmu.edu/moonranger/
+# # My specific role was extending FMECA to rover fault handling and skid steer kinematic model, additionally assisted with business tasks
 
 awards:
   - name: NY Times Feature for NASA Parachute Puzzle
