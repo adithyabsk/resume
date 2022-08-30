@@ -51,7 +51,6 @@
       <div class="tags">-{% for tag in e.tags %} {{ tag }} -{% endfor %}</div>{% endif %}
   {% endfor %}
   <h2 class="section-header">Education</h2>
-  <i style="margin: 0 0 0.4em 0">(Selected, relevant courses)</i>
   {% for d in resume.education %}
     <h3>
       <a href="{{ d.website }}">{{ d.institution }}</a> - 
@@ -73,13 +72,11 @@
       <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Website</th>
       </tr>
       {% for p in resume.projects %}
         <tr>
-          <td><b>{{ p.name }}</b></td>
+          <td><a href="{{ p.website }}"><i class="fa fa-solid fa-link fa-2xs"></i><b> {{ p.name }}</b></a></td>
           <td>{{ p.description }}</td>
-          <td style="white-space: nowrap"><a href="{{ p.website }}">{{ p.website }}</a></td>
         </tr>
       {% endfor %}
     </table>
@@ -95,7 +92,7 @@
       {% for a in resume.awards %}
         <tr>
           <td>{{ a.year }}</td>
-          <td><a href="{{ a.website }}"><b>{{ a.name }}</b></a></td>
+          <td><a href="{{ a.website }}"><i class="fa fa-solid fa-link fa-2xs"></i><b> {{ a.name }}</b></a>
           <td>{{ a.description }}</td>
         </tr>
       {% endfor %}

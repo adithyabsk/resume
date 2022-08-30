@@ -5,11 +5,6 @@
 
 /* When printing, set link color to black */
 @media print {
-    a, a:visited {
-        color: #000 !important;
-        text-decoration: none;
-    }
-
     html, body {
         width: 100vw !important;
         height: 100vh !important;
