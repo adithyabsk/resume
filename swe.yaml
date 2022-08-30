@@ -121,27 +121,27 @@ education:
       - Data Structures
 #      - Computer Architecture
 #      - Control Systems
-      - Industrial Robotics
-      - Embedded Systems
-#      - Neural Networks
+#      - Industrial Robotics
+#      - Embedded Systems
+      - Neural Networks
       - Computer Vision
       - Object Oriented Development
 # NCSSM courses moved here to save space
-#      - Graph Theory
+      - Graph Theory
       - Calculus III
-#      - Mathematical Modeling
-#      - Differential Equations
-#      - Complex Systems
-#      - Modern Networks
+      - Mathematical Modeling
+      - Differential Equations
+      - Complex Systems
+      - Modern Networks
 
 projects:
 #  - name: Foreshadow
 #    description: An automatic machine learning (AutoML), pipeline package built on top of sklearn and pandas to intuitively construct and tune machine learning models in Python.
 #    website: https://github.com/georgianpartners/foreshadow
 
-#  - name: AutoML Benchmarking
-#    description: A command line utility to scalably validate the performance of open source AutoML solutions using AWS instances
-#    website: https://github.com/georgianpartners/automl_benchmark
+  - name: AutoML Benchmarking
+    description: A command line utility to scalably validate the performance of open source AutoML solutions using AWS instances
+    website: https://github.com/georgianpartners/automl_benchmark
 
 #  - name: Loanchain
 #    description: A novel smart contact generator utilizing the Ethereum blockchain to broker transparent loan agreements. Used an oracle voting architecture to resolve loan interest rates.
@@ -163,9 +163,9 @@ projects:
 #    description: Invited to Mountain View to compete in a 24 hour product hackathon. Develop the DuoLingo for instruments with an MVP that used advanced signal processing to provide user feedback and instrument play style.
 #    website: https://github.com/adithyabsk/music_dev
 
-#  - name: NBAHackathon
-#    description: A player lineup optimization model using LSTM based deep neural network architecture that efficiently parsed aggregated play by play data.
-#    website: https://github.com/adithyabsk/NBAResearch
+  - name: NBAHackathon
+    description: A player lineup optimization model using LSTM based deep neural network architecture that efficiently parsed aggregated play by play data.
+    website: https://github.com/adithyabsk/NBAResearch
 
 #  - name: VideoVote
 #    description: A Twitch bot that builds an ephemeral MTV for YouTube where the chat could vote on the top video they wanted to see.
@@ -187,13 +187,13 @@ projects:
 #    description: The open source website that powers the NC State IEEE Student Branch.
 #    website: https://github.com/adithyabsk/NCSUIEEEWebsite
 
-  - name: SeamlessFits (2019 YCombinator Hackathon)
-    description: A mobile platform to explore and buy trending clothes. (AWS, Django, iOS, Expo)
-    website: https://github.com/adithyabsk/seamless
+#  - name: SeamlessFits (2019 YCombinator Hackathon)
+#    description: A mobile platform to explore and buy trending clothes. (AWS, Django, iOS, Expo)
+#    website: https://github.com/adithyabsk/seamless
 
-  - name: Tools for Thought Bot
-    description: A bot that integrates with Obsidian and RoamResearch to tweet random blocks.
-    website: https://github.com/adithyabsk/tftbot
+#  - name: Tools for Thought Bot
+#    description: A bot that integrates with Obsidian and RoamResearch to tweet random blocks.
+#    website: https://github.com/adithyabsk/tftbot
 
 #  - name: On Chain Profile Picture
 #    description: An NFT stored on the ethereum blockchain using SVG compression
@@ -207,16 +207,16 @@ projects:
 #    description: A Python implementation of the Dolev Strong distributed consensus algorithm.
 #    website: https://github.com/adithyabsk/crypto
 
-#  - name: Bird Audio
-#    description: A deep learning model to tell apart bird songs from calls and related blog post.
-#    website: https://github.com/adithyabsk/bird_audio
+  - name: Bird Audio
+    description: A deep learning model to tell apart bird songs from calls and related blog post.
+    website: https://github.com/adithyabsk/bird_audio
 
 #  - name: Chipotle Burrito Bodge
 #    description: A blog post and associated scripts to get a free burrito
 #    website: https://github.com/adithyabsk/chipotle_freeting
 
 #  - name: PortfolioHut
-#    description: A platform to analyze and compare historical returns across selected stocks in a portfolio (source code available upon request)
+#    description: A Django platform to analyze and compare historical returns across selected stocks in a portfolio
 #    website: https://github.com/adithyabsk/portfoliohut
 
 #  - name: Keep2Roam
@@ -227,7 +227,7 @@ projects:
 #    description: Data structures implemented from scratch in pure python (e.g. Hash Table, Heap)
 #    website: https://github.com/adithyabsk/datastructures
 
-  - name: Simple ML
+  - name: ML Framework
     description: A Pytorch-style machine learning framework from scratch with CUDA, OpenCL, and CPU bindings
     website: https://github.com/adithyabsk/simple_ml
 
@@ -294,10 +294,10 @@ awards:
 #    description: University
 #    website: https://www.carolinafintechhub.org/2018-fall-hackathon
 
-#  - name: NBA Hackathon Finalist
-#    year: 2018
-#    description: International (30/500)
-#    website: https://hackathon.nba.com/2018-hackathon-recap/
+  - name: NBA Hackathon Finalist
+    year: 2018
+    description: International (30/500)
+    website: https://hackathon.nba.com/2018-hackathon-recap/
 
 #  - name: IEEE SouthEastcon Hackathon
 #    year: 2018
@@ -319,10 +319,10 @@ awards:
 #    description: National
 #    website: https://grad.ncsu.edu/wp-content/uploads/2018/04/spring2018cermonyprogram.pdf
 
-  - name: FIRST Robotics World Quaterfinalist
-    year: 2017
-    description: International (top 2%)
-    website: https://www.thebluealliance.com/team/900/2017
+#  - name: FIRST Robotics World Quaterfinalist
+#    year: 2017
+#    description: International (top 2%)
+#    website: https://www.thebluealliance.com/team/900/2017
 
 #  - name: IBM Watson Scholar
 #    year: 2017
