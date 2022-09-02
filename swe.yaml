@@ -140,7 +140,7 @@ projects:
 #    website: https://github.com/georgianpartners/foreshadow
 
   - name: AutoML Benchmarking
-    description: A command line utility to scalably validate the performance of open source AutoML solutions using AWS instances
+    description: A command line utility to scalably validate the performance of open source AutoML solutions using a cluster of AWS instances
     website: https://github.com/georgianpartners/automl_benchmark
 
 #  - name: Loanchain
@@ -172,7 +172,7 @@ projects:
 #    website: https://github.com/adithyabsk/ProjectSocrates
 
 #  - name: ROS for FIRST Robotics
-#    description: The first implementation of the Robot Operating System (ROS) robot sensor information processing protocol at the high school level of robotics.
+#    description: The first implementation of the Robot Operating System (ROS) at the high school level of robotics on an Nvidia mobile GPU SoC (TX2).
 #    website: https://github.com/adithyabsk/2017VisionCode
 
 #  - name: High Power Rocketry Payload
