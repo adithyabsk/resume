@@ -6,8 +6,8 @@
 /* When printing, set link color to black */
 @media print {
     html, body {
-        width: 100vw !important;
-        height: 100vh !important;
+        width: 100% !important;
+        height: 100% !important;
         page-break-after: avoid !important;
         page-break-before: avoid !important;
         overflow: hidden !important;
