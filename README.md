@@ -22,6 +22,5 @@ pip install -e .
 **Usage**
 
 ```shell
-yaml-resume export swe.yaml -t simple -e html
-weasyprint resume.html resume.pdf
+./refresh.sh
 ```
